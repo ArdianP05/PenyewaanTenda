@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="09a80f7f-9708-40de-84b5-c5d52c614078">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select* from tbl_transaksi]]>
+	</queryString>
+	<field name="kd_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_alat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_member" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_sewa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lama_sewa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kuantitas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="b5a6ae84-1bc2-4fc0-9a9a-dcb1d394d3bb"/>
+				<staticText>
+					<reportElement x="63" y="0" width="483" height="43" forecolor="#FFFFFF" uuid="76d31287-d28c-4b02-aa1b-b6ae3685c5d0"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LAPORAN DATA TRANSAKSI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="43" width="575" height="43" forecolor="#FFFFFF" uuid="00eb384d-03ce-4de3-90c6-78df0bb6d82b"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PENYEWAAN TENDA SAMILARIZO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="b8dab7ab-bd9b-4174-950d-370ef8f3edcd"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="148" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d1316349-0525-4b7a-b203-ad1c1e1cf2be"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE TRANSAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="148" y="0" width="98" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f4657267-3752-48ea-9ace-b87c7de1e1de"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE ALAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="246" y="0" width="99" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ca5044b1-cc47-4aee-a39c-7123d5548be5"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID MEMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="345" y="0" width="101" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5a53dd6f-fda7-4d92-918a-0a858f017d2f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="446" y="0" width="109" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3f959249-24fd-45e1-a9f7-0c75da685a5f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA SEWA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="d89019fe-05a8-4904-8094-1229f0a72fef"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="366" y="0" width="69" height="20" uuid="d996f1aa-1072-43cd-9d68-3c773a520585"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="457" y="0" width="69" height="20" uuid="53d0357e-1ad8-4e82-812d-d8e77ce1ce40"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga_sewa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="258" y="0" width="69" height="20" uuid="9d3f1fd3-3afa-4eaf-b757-998007191a71"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_member}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="159" y="4" width="69" height="20" uuid="ec2cbf16-d774-4a90-ad43-0e29a46f380b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kd_alat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="19" y="4" width="69" height="20" uuid="3d34f3b0-8768-40b3-ad73-b9e50280d9c8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kd_transaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<summary>
+		<band height="214">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="486" y="97" width="69" height="20" uuid="d2a9561f-d702-4429-9bc0-ae32cea31a3c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_bayar}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="486" y="53" width="69" height="20" uuid="bfd64f95-2d7f-4e91-8e98-4ba582f43e3f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kuantitas}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="486" y="10" width="69" height="20" uuid="b35870ca-5cf0-48e8-ac71-979ddca032f9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lama_sewa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="348" y="10" width="109" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="90b88de0-1b21-41d7-9078-cf31276bce8b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAMA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="348" y="53" width="109" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3bd308d9-b2a1-45ef-9eb1-c525ab2424bc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KUANTITAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="348" y="97" width="109" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="943765ba-064b-40a8-9c55-1d0fa2f22bfc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL BAYAR]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
